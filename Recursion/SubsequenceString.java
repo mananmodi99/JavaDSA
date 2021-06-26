@@ -1,8 +1,6 @@
-package Recursion;
-
 public class SubsequenceString {
     public static void main(String[] args) {
-        Subsequences("abc", "");
+        Subsequences("cda", "");
     }
     public static void Subsequences(String str, String ans){
         //Base
