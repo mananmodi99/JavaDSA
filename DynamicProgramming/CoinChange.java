@@ -14,6 +14,10 @@ public class CoinChange {
         //best Solution - PepCoding Video
         Denominations_dp(coins, sum);
 
+        System.out.println();
+        System.out.println("Perm");
+        Denomination_dp_perm(coins, sum);
+
     }
     static void Denominations_rec(int[] coins, int sum, int curr_sum, String ans){
         //base case
@@ -62,8 +66,18 @@ public class CoinChange {
         dp[0] = 1;
         for(int i = 0; i<n ; i++){
             for(int j = coins[i]; j<=sum; j++){
-                if(dp[j-coins[i]]>0){
-                    dp[j] += dp[j-coins[i]];
+                dp[j] += dp[j-coins[i]];
+            }
+        }
+        System.out.println(dp[dp.length-1]);
+    }
+    static void Denomination_dp_perm(int[] coins, int sum){
+        int dp[] = new int[sum+1];
+        dp[0] = 1;
+        for(int i = 1; i<dp.length; i++){
+            for(int j = 0; j<coins.length; j++){
+                if(coins[j] <= i){
+                    dp[i] += dp[i-coins[j]];
                 }
             }
         }
