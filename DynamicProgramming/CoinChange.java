@@ -3,10 +3,11 @@ package DynamicProgramming;
 public class CoinChange {
     static int soln= 0;
     public static void main(String[] args) {
-        int[] coins = {1,2,3};
-        int sum = 4;
+        int[] coins = {2,3, 5, 6};
+        int sum = 10;
         Denominations_rec(coins, sum, 0, "");
         System.out.println(soln);
+        System.out.println();
         System.out.println(Denomination_rec_nonrep(coins, coins.length, sum));
         System.out.println();
         Denominations_dp_tab(coins, sum, coins.length);
