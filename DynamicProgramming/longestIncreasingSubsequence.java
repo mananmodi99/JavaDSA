@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 public class longestIncreasingSubsequence {
     public static void main(String[] args) {
-        int[] arr = {10,9,2,5,3,7,101,18};
+        int[] arr = {8,100,150, 10,12,14,10};
         int[] arr2= {10, 22, 9, 33, 21, 50, 41, 60, 80, 1};
         System.out.println(lis_dp_tab(arr));
     }
@@ -22,5 +22,32 @@ public class longestIncreasingSubsequence {
         for(int i : dp)
             max = Math.max(max, i);
         return max;
+    }
+    public static void lis_binarySearch(int arr[]) {
+        int tail[] = new int[arr.length];
+        int len = 1;
+        tail[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if(arr[i]>tail[len-1]){
+                tail[len] = arr[i];
+                len++;
+            }
+            else{
+                int swapper = binarySearchLIS(tail, len, arr[i]);
+                tail[swapper] = arr[i];
+            }
+        }
+        System.out.println(len);
+    }
+    public static int binarySearchLIS(int[] tail, int len, int item){
+        int lo = 0;
+        int hi = len-1;
+        int mid = 0;
+        while(hi>lo){
+            mid = (lo+hi)/2;
+            if(tail[mid]>=item){ hi = mid;}
+            else{ lo = mid+1;}
+        }
+        return hi;
     }
 }
