@@ -2,7 +2,7 @@ package TimeandSpaceComplexity;
 
 public class MergeSort {
     public static void main(String[] args) {
-       int[] arr = {20,10,30,50,60,5,80,25};
+       int[] arr = {2,4,1,3,5};
        int lo = 0, hi = arr.length-1;
        SortFunc(arr, lo, hi);
         for (int i: arr) {
