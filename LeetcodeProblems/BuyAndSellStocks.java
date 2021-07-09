@@ -13,4 +13,24 @@ public class BuyAndSellStocks {
         }
         return max_profit;
     }
+
+    //Buy Sell 2 - Infinite Transactions
+    public int maxProfit2(int[] prices) {
+        //infinite transactions
+        int buyPrice = prices[0], sellPrice = prices[0], profit = 0;
+        for(int i = 1; i<prices.length-1; i++){
+            if(prices[i]>sellPrice){
+                sellPrice = prices[i];
+            }
+            else{
+                profit += sellPrice-buyPrice;
+                buyPrice = prices[i];
+                sellPrice = prices[i];
+            }
+        }
+        //handling the last term at the end.
+        if(prices[prices.length-1]>sellPrice) sellPrice = prices[prices.length-1];
+
+        return profit+sellPrice-buyPrice;
+    }
 }
