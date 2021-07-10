@@ -4,7 +4,6 @@ import java.util.HashMap;
 
 public class TwoSum {
     //Problem Link:https://leetcode.com/problems/two-sum/
-
     public int[] twoSum(int[] arr, int target) {
         int[] temp = new int[2];
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -12,7 +11,7 @@ public class TwoSum {
             if(map.containsKey(target-arr[i])){
                 temp[0] = i;
                 temp[1] = map.get(target-arr[i]);
-                return temp;
+                return temp;//so that it does not consider itself only like target: 6 , diff = 6-3, elem 3, temp[1,1]
             }
             map.put(arr[i], i);
         }
