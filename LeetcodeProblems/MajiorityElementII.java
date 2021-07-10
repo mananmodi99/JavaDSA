@@ -1,4 +1,9 @@
 package LeetcodeProblems;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 //Problem Link: https://leetcode.com/problems/majority-element-ii
 public class MajiorityElementII {
     public List<Integer> majorityElement(int[] nums) {
