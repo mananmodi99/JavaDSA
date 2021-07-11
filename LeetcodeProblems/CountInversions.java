@@ -53,7 +53,7 @@ class CountInversions
                 arr[k++] = left[i++];
             else {
                 arr[k++] = right[j++];
-                swaps += (m + 1) - (l + i);
+                swaps += (m + 1 - l) - i;//size of left array - i inversions are possible
             }
         }
         while (i < left.length)
