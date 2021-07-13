@@ -6,9 +6,7 @@ public class LongestNonRepeatingSubstr {
     public static void main(String[] args) {
         System.out.println(lengthOfLongestSubstring("abcabcaaab"));
     }
-    public static int lengthOfLongestSubstring(String s) {
-
-        public int lengthOfLongestSubstring(String str) {
+    public static int lengthOfLongestSubstring(String str) {
             HashSet<Integer> set = new HashSet<>();
             int max_len = 0;
             int lo = 0, hi = 0;
@@ -26,6 +24,5 @@ public class LongestNonRepeatingSubstr {
             }
             //max_len = Math.max(hi-lo+1, max_len);
             return max_len;
-        }
     }
 }
