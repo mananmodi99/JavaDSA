@@ -1,3 +1,5 @@
+package Hashing;
+
 import java.util.*;
 
 public class SubArrayWithSumZero {
@@ -18,6 +20,7 @@ public class SubArrayWithSumZero {
 				set.add(pref_sum);
 		}
 		return false;
+		
 	}
 	static boolean Naive(int arr[]){//O(n2)
 		for(int i = 0; i<arr.length; i++){

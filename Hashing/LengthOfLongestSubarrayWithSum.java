@@ -1,13 +1,13 @@
-//package Hashing;
+package Hashing;//package Hashing;
 import java.util.*;
 
 public class LengthOfLongestSubarrayWithSum {
 	public static void main(String[] args){
 		int arr[] = {5,8,-4,-4,9,-2,2};
 		int tt2[] = {3,1,0,1,8,2,3,6};
-		int tt3[] = {1,-1,1,1,1,-1,-1};
+		int tt3[] = {1,2,1,2,1};
 		int sum = 5;
-		System.out.println(Efficient(tt3, 0));
+		System.out.println(Efficient(tt3, 3));
 		System.out.println("\nNaive");
 		System.out.println(Naive(tt3, 0));
 	}
