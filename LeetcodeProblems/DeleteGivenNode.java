@@ -1,2 +1,9 @@
-package LeetcodeProblems;public class DeleteGivenNode {
+package LeetcodeProblems;
+
+public class DeleteGivenNode {
+
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
 }
