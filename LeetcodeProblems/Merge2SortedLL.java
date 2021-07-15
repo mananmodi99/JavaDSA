@@ -19,7 +19,8 @@ public class Merge2SortedLL {
             temp1 = temp2;
             temp2 = swapper;
         }
-        ListNode head = temp1;ListNode temp = null;
+        ListNode head = temp1;
+        ListNode temp = null;
         while(temp1 != null && temp2 != null){
             if(temp1.val<=temp2.val) {
                 temp = temp1;
