@@ -1,3 +1,5 @@
+package greedy;
+
 import java.io.*;
 import java.util.*;
 class Pair{
