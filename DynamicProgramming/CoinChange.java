@@ -3,8 +3,8 @@ package DynamicProgramming;
 public class CoinChange {
     static int soln= 0;
     public static void main(String[] args) {
-        int[] coins = {2,3, 5, 6};
-        int sum = 10;
+        int[] coins = {1,2,5};
+        int sum = 11;
         Denominations_rec(coins, sum, 0, "");
         System.out.println(soln);
         System.out.println();
