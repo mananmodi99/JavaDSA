@@ -5,7 +5,7 @@ public class MatrixMedian {
         int arr[][] = {{1, 3, 5}, {2, 6, 9}, {3, 6, 9}};
         System.out.println(findMedian(arr));
     }
-    public int findMedian(int[][] arr) {
+    public static int findMedian(int[][] arr) {
         int n = arr.length;
         int m = arr[0].length;
         int hi = Integer.MIN_VALUE;
@@ -27,7 +27,7 @@ public class MatrixMedian {
         }
         return lo;
     }
-    public int countBS(int[] arr, int mid, int m){
+    public static int countBS(int[] arr, int mid, int m){
         int lo = 0;
         int hi = m-1;
         while(lo<=hi){
