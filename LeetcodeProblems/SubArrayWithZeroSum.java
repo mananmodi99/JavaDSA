@@ -4,7 +4,7 @@ import java.util.*;
 
 public class SubArrayWithZeroSum {
     public static void main(String[] args) {
-        System.out.println(Naive(new int[]{15,-2,2,-8,1,7,10,23}));
+        System.out.println(NumberOfsubarraysWithGivenSum(new int[]{15,-2,2,-8,1,7,10,23},15));
     }
     static int maxLen(int arr[], int n)
     {
@@ -35,7 +35,7 @@ public class SubArrayWithZeroSum {
         }
         return len;
     }
-    public int NumberOfsubarraysWithGivenSum(int[] arr, int k) {
+    public static int NumberOfsubarraysWithGivenSum(int[] arr, int k) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int count=0,sum=0;
         map.put(0,1);

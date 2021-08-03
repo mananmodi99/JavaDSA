@@ -1,3 +1,5 @@
+package TreeDS;
+
 import java.util.*;
 
 public class BinaryTreeGFG {
@@ -114,7 +116,7 @@ public class BinaryTreeGFG {
 		if(root == null) return;
 		Queue<Node> q = new LinkedList<>();
 		q.add(root);
-		while(q.isEmpty() == false){
+		while(!q.isEmpty()){
 			Node curr = q.poll();
 			System.out.print(curr.data + " ");
 			if(curr.left != null)
