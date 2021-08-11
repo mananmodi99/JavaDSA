@@ -2,6 +2,8 @@ package LeetcodeProblems.Trees;
 
 import java.util.*;
 
+import static javax.swing.Spring.height;
+
 public class ZigzagTraversal {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> list = new ArrayList<>();
@@ -30,5 +32,32 @@ public class ZigzagTraversal {
             list.add(currList);
         }
         return list;
+    }
+
+
+
+
+    //recursive
+    public void spiralPrint_rec(TreeNode root){
+        boolean l2r = false;
+        int h = height(root);
+        for(int i = 1; i<=h; i++){
+            spiralPrint_recClient(root, i, l2r);
+            l2r = !l2r;
+        }
+    }
+    public void spiralPrint_recClient(TreeNode root, int i, boolean l2r){
+        if(root == null) return;
+        if(i == 1) System.out.println(root.data);
+        else{
+            if(l2r){
+                spiralPrint_recClient(root.left, i-1, l2r);
+                spiralPrint_recClient(root.right, i-1, l2r);
+            }
+            else{
+                spiralPrint_recClient(root.right, i-1, l2r);
+                spiralPrint_recClient(root.left, i-1, l2r);
+            }
+        }
     }
 }
