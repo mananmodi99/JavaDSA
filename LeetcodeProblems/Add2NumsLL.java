@@ -3,8 +3,8 @@ package LeetcodeProblems;
 public class Add2NumsLL {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry = 0;
-        ListNode p, dummy = new ListNode(0);
-        p = dummy;
+        ListNode temp, dummy = new ListNode(0);
+        temp = dummy;
         while (l1 != null || l2 != null || carry != 0) {
             if (l1 != null) {
                 carry += l1.val;
@@ -14,9 +14,9 @@ public class Add2NumsLL {
                 carry += l2.val;
                 l2 = l2.next;
             }
-            p.next = new ListNode(carry%10);
+            temp.next = new ListNode(carry%10);
             carry /= 10;
-            p = p.next;
+            temp = temp.next;
         }
         return dummy.next;
     }
