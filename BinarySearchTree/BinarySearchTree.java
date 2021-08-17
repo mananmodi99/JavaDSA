@@ -1,4 +1,4 @@
-//package BinarySearchTreeDS;
+package BinarySearchTree;//package BinarySearchTreeDS;
 import java.util.*;
 
 public class BinarySearchTree {
